@@ -1,0 +1,32 @@
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+
+    };
+const nombreGato = gato.nombre;
+
+const {nombre, duerme, edad} = gato;
+
+
+console.log(nombre, duerme, edad);
+
+
+const nombre ="bluuweb";
+const gato={
+   // nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+
+    };
+const nombreGato = gato.nombre;
+// por default 
+const {nombre: nombreSuperGato = "sin nombre", duerme, edad} = gato;
+
+
+console.log(nombreSuperGato, duerme, edad);
+
+
+

@@ -1,0 +1,58 @@
+//Codigo del archivo html
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trbajando con DOM</title>
+ <script src="js/app.js" defer></script>
+</head>
+<body>
+    <h1 id="tituloWeb" class="text-primary">Lorem, ipsum dolor.</h1>
+    <div class="container">
+        <p class="text-danger">Lorem, ipsum dolor. 1</p>
+        <p class="text-danger">Lorem, ipsum dolor. 2</p>
+        <p class="text-danger">Lorem, ipsum dolor. 3</p>
+
+    </div>
+    <p class="text-danger">Fuera de container</p>  
+</body>
+</html>
+
+//Codigo del archivo app.js
+
+const h1 =document.getElementById("tituloWeb")
+
+console.log(h1.tagName);
+h1.textContent = "nuevo texto desde js"
+
+h1.style.backgroundColor="green";
+h1.style.color="white"
+
+
+//cambios por  eventos 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajando con DOM</title>
+ <script src="js/app.js" defer></script>
+</head>
+<body>
+    <h1 id="tituloWeb" class="text-primary">Lorem, ipsum dolor.</h1>
+    <button class="btn btn-primary"> Cambiar texto</button>
+</body>
+</html>
+
+const h1 =document.getElementById("tituloWeb")
+const boton =document.querySelector(".btn-primary");
+
+console.log(boton);
+boton.addEventListener("click",() => {
+    console.log('me diste click')
+    h1.textContent="texto desde js";
+    h1.style.color="red"
+

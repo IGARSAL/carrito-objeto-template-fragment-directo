@@ -1,0 +1,22 @@
+//funcion declarativa
+console.log(numAleaRango(10, 12))
+function numAleaRango(min,max){
+    return Math.floor(Math.random() * (max-min) +min);
+
+}
+
+
+// funcion expresada
+
+const numAzar = function(max, min){
+    return Math.floor(Math.random() * (max-min) +min);
+}
+console.log(numAzar(100,201));
+
+
+// //  función de flecha variantes
+// const azarFlecha=(max) =>  Math.floor(Math.random() * (max-1) + 1);
+
+//función de flecha
+const azarFlecha=(min=1, max=5) => Math.floor(Math.random() * (max-min) +min);
+console.log(azarFlecha());

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       let size = Number(prompt("Elige un numero"));
+        let board = "";
+       if (!Number.isNaN(size)) {
+        for (let y = 0; y < size; y++) {
+                for (let x = 0; x < size; x++) {
+                    if ((x + y) % 2 == 0) {
+                    board += " ";
+                   
+                    } else {
+                    board += "#";
+                    }
+                }
+            board += "\n";
+        }
+        console.log(board);
+       }
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

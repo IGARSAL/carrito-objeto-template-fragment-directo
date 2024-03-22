@@ -1,0 +1,88 @@
+//objetos
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    otro: {
+        amigos: ["cobarde", "timido", "Pegajoso"],
+        favoritos:{
+            comida:{
+                frio:"salmon",
+                caliente:"pollo"
+            },
+        },
+    },
+  };
+
+//   const amigosGatos=gato.otro.amigos;
+// const {
+//     otro: {amigos: amigosGatos}, 
+// } = gato;
+// console.log(amigosGatos);
+
+const {amigos} =gato.otro
+console.log(amigos)
+
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    otro: {
+        amigos: ["cobarde", "timido", "Pegajoso"],
+        favoritos:{
+            comida:{
+                frio:"salmon",
+                caliente:"pollo"
+            },
+        },
+    },
+  };
+
+const { amigos: amigoArray } = gato.otro;
+
+const [amigoUno, amigoDos] = amigoArray
+
+console.log(amigoDos)
+
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    otro: {
+        amigos: ["cobarde", "timido", "Pegajoso"],
+        favoritos:{
+            comida:{
+                frio:"salmon",
+                caliente:"pollo"
+            },
+        },
+    },
+  };
+
+// const { amigos: amigoArray } = gato.otro;
+const amigosArray =["cobarde", "timido", "Pegajoso"];
+const [aUno, aDos, aTres, aCuatro="no existe"] = amigosArray;
+
+console.log(aCuatro)
+
+//Estructuracion del Metodo
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer(comida){
+        return `${this.nombre} está comiendo ${comida}`;
+    },
+    mostrarEnemigos() {
+        return this.enemigos.forEach((item) => console.log(item));
+    },
+  };
+
+// const { amigos: amigoArray } = gato.otro;
+// const {comer} = gato;
+const comer = gato.comer;
+console.log(comer("pez"));

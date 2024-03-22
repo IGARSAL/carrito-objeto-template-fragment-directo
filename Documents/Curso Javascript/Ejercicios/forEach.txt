@@ -1,0 +1,6 @@
+let frutas =['manzana', 'sandia', 'pera'];
+
+frutas.forEach((fruta) => {
+    console.log(`${fruta}`);
+    // console.log(array)
+});

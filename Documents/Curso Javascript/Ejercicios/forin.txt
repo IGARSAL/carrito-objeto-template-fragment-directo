@@ -1,0 +1,21 @@
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+
+    };
+for (let propiedad in gato){
+    console.log(propiedad)
+}
+
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+
+    };
+for (let propiedad in gato){
+    console.log(gato[propiedad]);
+}
