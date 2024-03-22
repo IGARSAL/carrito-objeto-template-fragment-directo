@@ -1,0 +1,30 @@
+objetos anidados
+
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    otro: {
+        amigos: ["cobarde", "timido"],
+        favoritos:{
+            comida:{
+                frio:"salmon",
+                caliente:"pollo"
+            }
+        }
+    }
+    };
+    const amigos =["cobarde", "timido"]
+    console.log(amigos.push())
+    // verifica que la propieda exista y la cambia
+    // if (gato.hasOwnProperty("nombre")){
+    //     gato.nombre = "flojera";
+
+    // }
+
+      // con el simbolo ? verifica si la propiedad existe
+    // console.log(gato.otro.favorito?.comida.frio);
+   
+   
+    // console.log(gato.otro.amigos);

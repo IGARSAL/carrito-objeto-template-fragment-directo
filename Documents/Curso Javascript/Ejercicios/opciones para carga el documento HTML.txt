@@ -1,0 +1,13 @@
+// opciones para carga el documento HTML antes ejecutar script 
+
+en el archivo index
+<script src="js/app.js" defer></script>
+
+en el archivo app.js
+document.addEventListener("DOMContentLoaded", () => {
+     console.log(document.getElementById("tituloWeb"));
+     console.log(document.getElementById("tituloWeb").textContent);
+     console.log(document.getElementById("tituloWeb").innerHTML);
+
+ })
+

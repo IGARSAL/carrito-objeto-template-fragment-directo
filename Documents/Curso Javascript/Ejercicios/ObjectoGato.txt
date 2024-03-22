@@ -1,0 +1,23 @@
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+}
+console.log(gato.nombre);
+console.log(gato["nombre"]);
+console.log(gato.duerme);
+console.log(gato["enemigos"][0]);
+console.log(gato.enemigos[0]);
+
+CRUD
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+}
+gato.color="Gris"
+delete gato.duerme
+gato.edad=5
+console.log(gato)

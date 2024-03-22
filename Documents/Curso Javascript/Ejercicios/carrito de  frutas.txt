@@ -1,0 +1,14 @@
+const frutas= [];
+const fruta =prompt('Feria Market ¿Que fruta deseas comparar?')
+
+frutas.push(fruta);
+
+while(confirm('Desea agregar un elemento?')){
+       const fruta = prompt("Ingresa una fruta:")
+       frutas.push(fruta);
+    }
+console.log("Compraste:");
+
+for(const fruta of frutas){
+    console.log(fruta);
+}

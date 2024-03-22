@@ -1,0 +1,77 @@
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer: function (){
+        console.log("gato comiendo");
+        },
+    comerDos(){
+        console.log("gato comiendo dos")
+    },
+    };
+gato.comer();
+gato.comerDos();
+
+
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer(alimento) {
+        console.log("gato comiendo: " + alimento);
+        },
+    };
+gato.comer("Pez");
+
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer(alimento) {
+        console.log(`
+         ${gato.nombre} esta comiendo alimento ${alimento}
+        
+        `);
+        },
+    };
+gato.comer("Pez");
+
+//Se utiliza this 
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer(alimento) {
+        console.log(`
+         ${this.nombre} esta comiendo alimento ${alimento}
+        
+        `);
+        },
+    };
+gato.comer("Pez");
+
+//No se puede utilizar funcion de fecha en un metodo pero si dento de este
+
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    comer(alimento) {
+        console.log(`
+         ${this.nombre} esta comiendo alimento ${alimento}
+        
+        `);
+        },
+        listarEnemigos() {
+            this.enemigos.forEach((item) => console.log(item));
+        },
+    };
+gato.listarEnemigos();
+
+note.js
+

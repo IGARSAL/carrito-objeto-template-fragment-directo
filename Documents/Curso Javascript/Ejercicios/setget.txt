@@ -1,0 +1,18 @@
+const gato={
+    nombre:"valiente",
+    duerme: true,
+    edad: 10,
+    enemigos: ["agua", "perros"],
+    get nombreMayuscula(){
+        return this.nombre.toUpperCase();
+    },
+    set agregarEnemigo(nuevoAmigo) {
+        this.enemigos.push(nuevoAmigo)
+    }
+  };
+
+  console.log(gato.nombreMayuscula);
+  gato.agregarEnemigo="Batman";
+  console.log(gato);
+
+561429 num reporte#37343c
