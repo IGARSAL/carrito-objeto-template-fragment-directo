@@ -1,0 +1,96 @@
+// Clase Persona
+class Persona {
+    static contadorPersonas = 0; // Propiedad estática
+
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+        Persona.contadorPersonas++; // Incrementar el contador cada vez que se crea una instancia
+    }
+
+    get getNombre() {
+        return this.nombre;
+    }
+
+    set setNombre(nombre) {
+        this.nombre = nombre;
+    }
+
+    get getEdad() {
+        return this.edad;
+    }
+
+    set setEdad(edad) {
+        this.edad = edad;
+    }
+
+    // Método estático
+    static totalPersonas() {
+        return `Total de personas: ${this.contadorPersonas}`;
+    }
+}
+
+// Clase Profesor que hereda de Persona
+class Profesor extends Persona {
+    constructor(nombre, edad, asignatura) {
+        super(nombre, edad);
+        this.asignatura = asignatura;
+    }
+
+    get getAsignatura() {
+        return this.asignatura;
+    }
+
+    set setAsignatura(asignatura) {
+        this.asignatura = asignatura;
+    }
+
+    enseñar() {
+        return `El profesor ${this.nombre} está enseñando ${this.asignatura}`;
+    }
+}
+
+// Clase Estudiante que hereda de Persona
+class Estudiante extends Persona {
+    constructor(nombre, edad, curso) {
+        super(nombre, edad);
+        this.curso = curso;
+    }
+
+    get getCurso() {
+        return this.curso;
+    }
+
+    set setCurso(curso) {
+        this.curso = curso;
+    }
+
+    estudiar() {
+        return `El estudiante ${this.nombre} está estudiando ${this.curso}`;
+    }
+}
+
+// Crear instancias de Profesor y Estudiante
+const profesor1 = new Profesor("Dr. Smith", 45, "Matemáticas");
+const estudiante1 = new Estudiante("Alice", 20, "Ingeniería");
+
+// Mostrar información de las instancias
+console.log(profesor1.getNombre); // Dr. Smith
+console.log(profesor1.getEdad); // 45
+console.log(profesor1.getAsignatura); // Matemáticas
+console.log(profesor1.enseñar()); // El profesor Dr. Smith está enseñando Matemáticas
+
+console.log(estudiante1.getNombre); // Alice
+console.log(estudiante1.getEdad); // 20
+console.log(estudiante1.getCurso); // Ingeniería
+console.log(estudiante1.estudiar()); // El estudiante Alice está estudiando Ingeniería
+
+// Cambiar propiedades usando setters
+profesor1.setAsignatura = "Física";
+console.log(profesor1.enseñar()); // El profesor Dr. Smith está enseñando Física
+
+estudiante1.setCurso = "Medicina";
+console.log(estudiante1.estudiar()); // El estudiante Alice está estudiando Medicina
+
+// Mostrar el total de personas creadas
+console.log(Persona.totalPersonas()); // Total de personas: 2
